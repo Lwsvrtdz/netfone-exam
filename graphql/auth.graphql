@@ -1,0 +1,9 @@
+extend type Mutation {
+    login(email: String!, password: String!, device_name: String!): String!
+
+    logout(id: ID): String @guard
+}
+
+extend type Query {
+    me: User! @guard @auth
+}

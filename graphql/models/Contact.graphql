@@ -1,0 +1,25 @@
+extend type Query @guard {
+    contacts: [Contact]! @paginate(defaultCount: 10)
+    contact(id: ID @eq, contact_no: String @eq): Contact @find
+}
+
+extend type Mutation @guard {
+    createContact(
+        name: String!
+        contact_no: String! @rules(apply: ["required", "unique:contacts"])
+    ): Contact! @create
+
+    updateContact(
+        id: ID!
+        name: String
+        contact_no: String @rules(apply: ["unique:contacts"])
+    ): Contact! @update
+
+    deleteContact(id: ID! @whereKey): Contact @delete
+}
+
+type Contact {
+    id: ID!
+    name: String
+    contact_no: String!
+}

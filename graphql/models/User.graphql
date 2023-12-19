@@ -1,0 +1,6 @@
+type User {
+    id: ID!
+    name: String
+    email: String!
+    email_verified_at: DateTime
+}
