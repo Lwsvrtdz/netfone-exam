@@ -4,7 +4,8 @@ This application is built on top of Laravel 10.x and utilizes the GraphQL API, p
 
 ## Technical Exam for Netfone - Backend Software Engineer
 
-As part of the technical exam for Netfone, I have created a GraphQL API endpoint accessible through the `/graphql` endpoint. Laravel Sanctum is used for authentication on each endpoint.
+As part of the technical exam for Netfone, I have created a GraphQL API endpoint accessible through the `/graphql` endpoint. 
+## Laravel Sanctum is used for authentication on each endpoint.
 
 ## Features
 
